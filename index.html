@@ -138,8 +138,8 @@ margin: 0 auto;
   </head>
   <body>
     <header>
-      <h1>Album</h1>
-      <p class="subtitle">Digital Flipbook</p>
+      <h1>शोधपरिसंवादः </h1>
+      <p class="subtitle">( Research Colloquia) </p>
     </header>
     <main>
       <div id="status">Preparing your book…</div>
@@ -186,10 +186,7 @@ margin: 0 auto;
         try {
           const pdf = await pdfjsLib.getDocument({ url: "./book.pdf" }).promise;
           const pageElements = [];
-          const targetWidth = Math.min(
-            850,
-            Math.max(480, window.innerWidth * 0.72),
-          );
+         const targetWidth = Math.min(1100, Math.max(500, window.innerWidth * 0.7));
           for (let pageNo = 1; pageNo <= pdf.numPages; pageNo++) {
             statusEl.textContent = `Loading page ${pageNo} of ${pdf.numPages}…`;
             const page = await pdf.getPage(pageNo);
